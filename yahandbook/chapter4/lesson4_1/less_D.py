@@ -5,7 +5,6 @@ def month(num, lang):
     return get_month_en(num) if lang == 'en' else get_month_ru(num)
 
 
-
 def get_month_en(num):
     month = {
         1: 'January',
@@ -23,6 +22,7 @@ def get_month_en(num):
 
     }
     return month[num]
+
 
 def get_month_ru(num):
     month = {
@@ -44,4 +44,3 @@ def get_month_ru(num):
 
 result = month(1, "en")
 print(result)
-
