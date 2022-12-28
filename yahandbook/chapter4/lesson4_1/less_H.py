@@ -15,7 +15,7 @@ def get_instance(any_obj):
 
 
 def is_list_or_tuple(any_obj):
-    string = map(str, any_obj)
+
     return True if any_obj == any_obj[::-1] else False
 
 
@@ -34,6 +34,5 @@ def is_num_or_string(any_obj):
 # print(result2)
 # print(result3)
 
-seq = (1,"string", 2, 4, 5)
-print(seq[::-1])
+
 
