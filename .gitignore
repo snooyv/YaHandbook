@@ -2,3 +2,4 @@
 tests/
 .venv
 .code
+main.py
