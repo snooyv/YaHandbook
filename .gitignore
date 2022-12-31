@@ -2,4 +2,5 @@
 tests/
 .venv
 .code
-main.py
+yahandbook/chapter5/lesson5_1/main.py
+*__pycache__
