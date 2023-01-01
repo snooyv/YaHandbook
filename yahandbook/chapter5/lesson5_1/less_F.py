@@ -5,12 +5,39 @@ import math
 class Rectangle:
 
     def __init__(self, tuple1, tuple2):
-        self.ax, self.ay = tuple1
-        self.cx, self.cy = tuple2
+        # self.ax, self.ay = tuple1
+        # self.cx, self.cy = tuple2
+        self.chek_corner2(tuple1, tuple2)
 
-    def chek_conrner(self):
-        if self.ax < self.cx:
-            self.ax, self.ay = self.cx, self.cy
+    # def chek_conrner(self, tuple1, tuple2):
+    #     self.ax, self.ay = tuple1
+    #     self.cx, self.cy = tuple2
+    #     if self.ax < self.cx and self.ay < self.cy:
+    #         print("AC")
+    #         print("Новая версия")
+    #         return "AC"
+    #     elif self.ax < self.cx and self.ay > self.cy:
+    #         print("BD")
+    #         return "BD"
+    #     elif self.ay < self.cy:
+    #         print("DB")
+    #         return "DB"
+    #     print("CA")
+    #     return "CA"
+
+    @staticmethod
+    def chek_corner2(tup1, tup2):
+        if tup1[0] < tup2[0] and tup1[1] < tup2[1]:
+            print("AC")
+            return "AC"
+        elif tup1[0] < tup2[0] and tup1[1] > tup2[1]:
+            print("BD")
+            return "BD"
+        elif tup1[1] < tup2[1]:
+            print("DB")
+            return "DB"
+        print("CA")
+        return "CA"
 
     def perimeter(self):
         ab = self.light(self.ax, self.ay, self.ax, self.cy)
